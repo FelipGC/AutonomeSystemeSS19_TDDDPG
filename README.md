@@ -19,6 +19,7 @@ ___
 - To use generated the weights after a training change `TRAINING_MODE = True` to `TRAINING_MODE = False` in `params.py`
 ___
 
+
 ### Hyperparameters
 
 | Hyperparameter| Values| Description  |
