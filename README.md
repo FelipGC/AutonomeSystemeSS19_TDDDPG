@@ -3,7 +3,7 @@ Autonome Systeme SS2019
 ___
 
 - Set path at: `env = UnityEnvironment(file_name=<PATH>)` in run.py
-<br /> If you want to start training directly with Unity set `env = None
+<br /> If you want to start training directly with Unity set `env = None`
 <br />(default path =  `"buildings/Linux/3DBall_train_linux.x86_64"`)
 
 - Start a training session with `run.py`
@@ -18,7 +18,6 @@ ___
 
 - To use generated the weights after a training change `TRAINING_MODE = True` to `TRAINING_MODE = False` in `params.py`
 ___
-
 
 ### Hyperparameters
 
