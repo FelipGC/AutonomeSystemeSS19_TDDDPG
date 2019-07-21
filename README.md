@@ -3,15 +3,20 @@ Autonome Systeme SS2019
 ___
 
 - Set path at: `env = UnityEnvironment(file_name=<PATH>)` in run.py
+<br /> If you want to start training directly with Unity set `env = None
+<br />(default path =  `"buildings/Linux/3DBall_train_linux.x86_64"`)
 
-- Start training session with `run.py`
+- Start a training session with `run.py`
 
-- Start Multiple-Hyperparameter training sessions with `hyperparameter_training.py`
-
-- Show dashboard with `dashboard.py`
+- Start the Multiple-Hyperparameter training sessions with `hyperparameter_training.py`
 
 - All hyperparameters with corresponding values can be found in `params.py`
 
+- For starting the dashboard just run `dashboard.py`
+<br/> The dashboard will take the logs from the directory logs_dash. 
+<br/>If you want to use your own generated logs after training change the path `PATH_DASH = 'logs_dash'` to PATH_DASH = 'logs'` in params.py
+`
+- To use generated the weights after a training change `TRAINING_MODE = True` to `TRAINING_MODE = False` in params.py
 ___
 
 ### Hyperparameters
