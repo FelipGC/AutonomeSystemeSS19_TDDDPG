@@ -4,18 +4,7 @@ import run
 from utils import Logger
 
 NUM_OF_TRAINING_PHASES = 3
-PARAMETERS_TO_CHANGE = {'TAU': [1, 0.1, 0.01, 0.001, 0.0001, 0.00001],
-                        'UNITS': [4, 16, 32, 64, 128, 256],  # vllt nur 64 und 128
-                        'BATCH_SIZE': [1, 16, 32, 64, 128, 256, 512],  # 32,64
-                        'BUFFER_SIZE': [32, 256, 1024, 8192, 262144, 1048576],  # weg 32, 256, 1024
-                        'INITIAL_RANDOM_ROLLOUTS': [True, False],
-                        'DROP_OUT_PROB': [0, 0.1, 0.2, 0.3, 0.4, 0.5],  # mal ausprobieren
-                        'POLICY_DELAY': [1, 2, 4, 8, 16],
-                        'GAMMA': [1, 0.99, 0.9, 0.7, 0.5, 0.25],  # wrsl nicht wichtig
-                        'SIGMA': [0, 0.1, 0.3, 0.6, 1.2, 2.4, 4, 8],  # weg
-                        'LR_ACTOR': [1, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6],  # weg
-                        'LR_CRITIC': [1, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6],  # weg
-                        }
+
 
 PARAMETERS_TO_CHANGE = {
     'POLICY_DELAY': [1, 2, 4, 8, 16],

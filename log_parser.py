@@ -1,6 +1,5 @@
 from collections import deque, namedtuple, defaultdict
 from itertools import zip_longest
-
 import os
 import plotly.graph_objs as go
 import plotly.offline as py
@@ -23,8 +22,6 @@ def get_plot_traces(p, p_avg, p_min, p_max, p_med, p_current, param_name=None, p
 
     data = [trace_avg, trace_min, trace_max, trace_med, trace_current]
     return data
-
-
 
 
 def get_hyperparams(lines):
@@ -65,6 +62,7 @@ def get_hyperparams(lines):
 
     params_dict = {k: v for k, v in params_dict.items() if v is not ''}
     return params_dict
+
 
 def get_avg_data(selected_hyperparam, selected_value,twin_delay):
     global sum_rewards
@@ -140,6 +138,7 @@ def get_avg_data(selected_hyperparam, selected_value,twin_delay):
     sum_rewards = sum_rewards_count/count
     return data_avg, data_min, data_max, data_med, data_cur
 
+
 def get_avg_graphs(selected_hyperparam, selected_value, twin_delay):
     traces_array = []
     data_avg, data_min, data_max, data_med, data_cur = get_avg_data(selected_hyperparam, selected_value, twin_delay)
@@ -164,6 +163,7 @@ def get_avg_graphs(selected_hyperparam, selected_value, twin_delay):
     for overview in overview_traces:
        traces_array.append(overview)
     return traces_array
+
 
 def get_multi_value_graphs(selected_hyperparam, selected_evaluation):
     hyper_parameters_values = []
@@ -251,6 +251,7 @@ def get_multi_value_graphs(selected_hyperparam, selected_evaluation):
 
     return traces_array
 
+
 def plot_overview_multi_val_graph(data_list, statistic_type):
     traces = []
 
@@ -310,6 +311,7 @@ def plot_mean_graph(data, statistic_type, twin_delay):
 
         return figure
 
+
 def plot_overview_graph(data_list, statistic_type, twin_delay):
     traces = defaultdict(list)
     parameter = ""
@@ -335,7 +337,6 @@ def plot_overview_graph(data_list, statistic_type, twin_delay):
                                                        param_name=statistics + "(" + key + ")", param_val=p)[0])
     overview = []
 
-
     for parameter, trace in traces.items():
         layout = go.Layout(title=statistic_type + " Scores for " + parameter + ' (' + algorithm_name + ')',
                            legend=dict(orientation="h"),
@@ -358,6 +359,5 @@ def display_graphs( figures_array, file_name1, file_name2):
 
 
 
-
-# TESTS
+# Just for TESTING without Dashboard
 # display_graphs(get_multi_value_graphs(selected_hyperparam="BATCH_SIZE", selected_evaluation="Average"))

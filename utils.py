@@ -214,9 +214,6 @@ class LogParser:
 
                 hyperparameter_name, hyper_parameters_value =  filename.split("-")[2].split("#")
 
-                print(hyperparameter_name, hyper_parameters_value)
-                # print(self.get_hyperparams(head))
-
                 p_avg, p_min, p_max, p_med, p_cur = [], [], [], [], []
 
                 for line in f:

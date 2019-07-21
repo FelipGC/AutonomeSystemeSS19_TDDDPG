@@ -10,7 +10,6 @@ import torch
 import datetime
 import pickle
 import plotly.graph_objs as go
-import plotly.offline as py
 
 
 from utils import DEVICE, create_directories, get_plot_traces, get_histograms, Logger
@@ -176,7 +175,6 @@ def plot_graph(env):
         # py.plot(data, filename='{}/{}-scores-{}.html'.format(params.PATH_GRAPHS, brain_name, time))
 
         # plot histogram
-        print("Histo",STEP_DICT_COUNT[brain_name].copy())
         histograms = get_histograms(STEP_DICT_COUNT[brain_name].copy())
         # add figure to display in dashboard
         figures.append(histograms)
@@ -222,7 +220,7 @@ def main(label='train'):
         print("\n")
         print("Logs:\n")
 
-        env = UnityEnvironment(file_name=None, worker_id=0, seed=1)
+        env = UnityEnvironment(file_name="buildings/Linux/3DBall_train_linux.x86_64", worker_id=0, seed=1)
         atexit.register(save_figures)
         atexit.register(plot_graph, env)
 

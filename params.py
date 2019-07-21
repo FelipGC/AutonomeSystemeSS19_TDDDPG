@@ -46,8 +46,3 @@ def print_parameters():
     [print(k, ':\t', v) for k, v in globals().copy().items() if
      not k.startswith('_') and k != 'tmp' and k != 'In' and k != 'Out' and not hasattr(v, '__call__')]
 
-# Colors
-# Blue #1F76B4
-# Orange #FFA500
-# Green #2CA02C
-# Red #FF0100
