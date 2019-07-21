@@ -13,10 +13,10 @@ ___
 - All hyperparameters with corresponding values can be found in `params.py`
 
 - For starting the dashboard just run `dashboard.py`
-<br/> The dashboard will take the logs from the directory logs_dash. 
-<br/>If you want to use your own generated logs after training change the path `PATH_DASH = 'logs_dash'` to PATH_DASH = 'logs'` in params.py
-`
-- To use generated the weights after a training change `TRAINING_MODE = True` to `TRAINING_MODE = False` in params.py
+<br/> The dashboard will take the logs from the directory `/logs_dash`. 
+<br/>If you want to use your own generated logs after training change the path `PATH_DASH = 'logs_dash'`to `PATH_DASH = 'logs'` in `params.py`
+
+- To use generated the weights after a training change `TRAINING_MODE = True` to `TRAINING_MODE = False` in `params.py`
 ___
 
 ### Hyperparameters
