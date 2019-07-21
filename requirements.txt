@@ -1,0 +1,4 @@
+plotly
+torch
+numpy
+dash==1.0.0
