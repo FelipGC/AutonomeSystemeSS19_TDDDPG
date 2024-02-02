@@ -1,4 +1,4 @@
 plotly
 torch
 numpy
-dash==1.0.0
+dash==2.15.0
